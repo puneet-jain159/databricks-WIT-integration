@@ -137,16 +137,13 @@ with tf.io.TFRecordWriter(record_file) as writer:
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC !(image/connection.png)
+# MAGIC Once Tensorboard is started we need to populate 2 fields in the What-if tools
+# MAGIC 
+# MAGIC **Inference Address**: DBFS location of the model which needs to be used for inference </br>
+# MAGIC **Path of examples**: Location of the example files stored in TF.records format
+# MAGIC 
+# MAGIC ![my_test_image](https://raw.githubusercontent.com/puneet-jain159/databricks-WIT-integration/6e2d012ef604ba791fa9ce9fdc887fa2144cfb88/images/connection.png?token=GHSAT0AAAAAABSM3KDTKUHK4VRILCOH3XXAYW2T2NA)
 
 # COMMAND ----------
 
 # MAGIC %tensorboard --logdir $experiment_log_dir --whatif-use-unsafe-custom-prediction $repo_loc/custom_func.py  --whatif-data-dir $loc/test/
-
-# COMMAND ----------
-
-
-
-# COMMAND ----------
-
-
